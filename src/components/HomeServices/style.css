@@ -1,0 +1,121 @@
+.services {
+    padding: 0;
+    margin: 0 0 60px 0;
+    box-sizing: border-box;
+}
+
+.services .container {
+    @media (max-width: 576px) {
+        padding: 0!important;
+    }
+}
+
+.services__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.services__title {
+    margin: 0;
+    padding: 0;
+    color: var(--secondary-color);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.services__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    width: 5%;
+}
+
+.services__description {
+    margin: 10px 0 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black-color);
+
+    @media (max-width: 576px) {
+        font-size: 1.6rem;
+        padding: 0 1.25rem!important;
+    }
+}
+
+.services__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.service-card {
+  width: calc(33.33% - 20px); /* Adjust the width as needed for responsive columns */
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+
+  @media (min-width: 992px) {
+    width: calc(20% - 10px);
+  }
+}
+
+.service-card:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  opacity: 1;
+}
+
+.service-card svg {
+  max-width: 100px;
+  height: auto;
+  margin: 0 auto 10px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 50px;
+  border: 1px solid #d3d3d3;
+  fill: var(--secondary-color);
+}
+
+.service-card h2 {
+  font-size: 1.25rem;
+  margin: 25px 0;
+  color: var(--secondary-color);
+}
+
+.service-card:hover h2 {
+  color: var(--white-color);
+}
+
+.service-card p {
+  font-size: 18px;
+  @media (max-width: 992px) {
+    font-size: 15px;
+  }
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .service-card {
+    width: calc(50% - 20px); /* Adjust for two columns on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    width: 100%; /* Single column on smaller screens */
+  }
+}

@@ -1,0 +1,11 @@
+.not__found {
+    display: grid;
+    place-items: center;
+    height: 50vh;
+}
+
+.not__found div {
+    font-size: 5rem;
+    font-style: italic;
+    color: red;
+}
